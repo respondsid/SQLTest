@@ -1,0 +1,58 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+/target/
+/bin/
+.gradle
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.factorypath
+.springBeans
+.apt_generated
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Node.js
+/node_modules
+/dist
+/tmp
+/npm-debug.log
+.env
+.angular/
+.cache/
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Natural Language to SQL Interface</h1>
+
+  <div class="query-section">
+    <textarea [(ngModel)]="naturalLanguageQuery" placeholder="Enter your natural language query here..."></textarea>
+    <button (click)="executeQuery()">Execute Query</button>
+  </div>
+
+  <div *ngIf="generatedSql" class="sql-section">
+    <h2>Generated SQL:</h2>
+    <pre>{{ generatedSql }}</pre>
+  </div>
+
+  <div *ngIf="queryResults && queryResults.length > 0" class="results-section">
+    <h2>Query Results:</h2>
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let col of getColumnNames()">{{ col }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of queryResults">
+          <td *ngFor="let col of getColumnNames()">{{ row[col] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="queryResults && queryResults.length === 0" class="no-results-section">
+    <p>No results found for your query.</p>
+  </div>
+
+  <div *ngIf="error" class="error-section">
+    <h2>Error:</h2>
+    <p>{{ error }}</p>
+  </div>
+</div>
